@@ -127,6 +127,11 @@ body {
         grid-template-columns: 1fr;
     }
 
+     section {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
     h1 {
         font-size: 1.5rem;
         letter-spacing: 1px;
