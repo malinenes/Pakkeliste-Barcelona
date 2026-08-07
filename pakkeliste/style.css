@@ -1,0 +1,130 @@
+.over-tittel {
+    text-align: center;
+    font-family: 'Fredoka', sans-serif;
+    color: #2e8b57;
+}
+
+h1 {
+    font-family:'Fredoka', sans-serif; 
+    text-align: center;
+    padding: 24px 0;
+    margin: 10px;
+    color: #2e8b57;
+    letter-spacing: 3px;
+    background-color: #dcf5e3;
+    border: 2px solid #2e8b57;
+    border-radius: 12px;
+}
+
+
+.pakkeliste-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px, 1fr));
+    gap: 20px
+}
+
+.checklist {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.checklist li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.checklist input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+section {
+    padding: 24px 28px;
+    border-radius: 12px;
+}
+
+.section-important {
+    background-color: #dcf5e3;
+    margin-left: 10px;
+    border: 2px solid #2e8b57;
+ 
+    
+}
+.section-important input[type="checkbox"] {
+    accent-color: #2e8b57;
+}
+.section-important h2 {
+    color: #2e8b57;
+
+
+}
+
+.section-bitch {
+    background-color: #fde2e2 ;
+    margin-right: 10px;
+    border: 2px solid #e07a5f;
+    
+}
+.section-bitch input[type="checkbox"]{
+    accent-color: #e07a5f;
+}
+.section-bitch h2 {
+    color: #e07a5f;
+    
+}
+
+.section-workout {
+    background-color: #e0e4fc;
+    margin-left: 10px;
+    border: 2px solid #4a5fd1;
+}
+.section-workout input[type="checkbox"] {
+    accent-color: #4a5fd1;
+}
+.section-workout h2 {
+    color: #4a5fd1;
+    
+}
+
+.section-beach {
+    background-color: #f6e0fc;
+    margin-right: 10px;
+    border: 2px solid #a347c9;
+}
+.section-beach input[type="checkbox"] {
+    accent-color: #a347c9;
+}
+.section-beach h2 {
+    color: #a347c9;
+    
+}
+
+.section-random {
+    background-color: #fde5cc;
+    margin-left: 10px;
+    border: 2px solid #d97b29;
+}
+.section-random input[type="checkbox"] {
+    accent-color: #d97b29;
+}
+.section-random h2 {
+    color: #d97b29;
+   
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f0f0f0;
+}
+
+
+
+@media (max-width: 600px) {
+    .pakkeliste-grid {
+        grid-template-columns: 1fr;
+    }
+}
