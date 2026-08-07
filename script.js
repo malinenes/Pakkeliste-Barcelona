@@ -52,22 +52,32 @@ const lists = {
     ],
 };
 
-function renderList(ulId,items) {
+function renderList(ulId, items) {
     const ul = document.getElementById(ulId);
-    items.forEach((text, index)=> {
+    items.forEach((text, index) => {
         const id = `${ulId}-${index}`;
 
         const li = document.createElement('li');
         li.innerHTML = `
-        <input type="checkbox" id="${id}">
-        <label for="${id}">${text}</label>`;
+            <input type="checkbox" id="${id}">
+            <label for="${id}">${text}</label>`;
         ul.appendChild(li);
+
+        const checkbox = document.getElementById(id);
+
+    
+        const saved = localStorage.getItem(id);
+        if (saved === "true") {
+            checkbox.checked = true;
+        }
+
+        
+        checkbox.addEventListener('change', () => {
+            localStorage.setItem(id, checkbox.checked);
+        });
     });
 }
 
-for (const [ulId,items] of Object.entries(lists)) {
-    renderList(ulId,items);
+for (const [ulId, items] of Object.entries(lists)) {
+    renderList(ulId, items);
 }
-
-
-console.log("Page loaded!");
